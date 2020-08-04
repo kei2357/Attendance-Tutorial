@@ -1,8 +1,5 @@
 class AttendancesController < ApplicationController
-<<<<<<< HEAD
-  UPDATE_ERROR_MSG = "勤怠登録に失敗しました。やり直してください。"
-=======
->>>>>>> add-user-attendances
+
 
   def update
     @user = User.find(params[:user_id])
@@ -12,7 +9,6 @@ class AttendancesController < ApplicationController
       if @attendance.update_attributes(started_at: Time.current.change(sec: 0))
         flash[:info] = "おはようございます！"
       else
-<<<<<<< HEAD
         flash[:danger] = UPDATE_ERROR_MSG
       end
     elsif @attendance.finished_at.nil?
@@ -20,9 +16,6 @@ class AttendancesController < ApplicationController
         flash[:info] = "お疲れ様でした。"
       else
         flash[:danger] = UPDATE_ERROR_MSG
-=======
-        flash[:danger] = "勤怠登録に失敗しました。やり直してください。"
->>>>>>> add-user-attendances
       end
     end
     redirect_to @user

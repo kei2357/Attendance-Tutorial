@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20200802044637) do
-=======
-ActiveRecord::Schema.define(version: 20200725092401) do
->>>>>>> add-user-attendances
 
   create_table "attendances", force: :cascade do |t|
     t.date "worked_on"
